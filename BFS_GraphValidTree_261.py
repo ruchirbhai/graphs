@@ -37,7 +37,7 @@ class Solution:
         # PART 2: DFS/ BFS loop
         # Here we need to add a check for cycles We check this by 
         # looking for the fact that the neighbor is not a parent of the node return true
-        def dfs(source):
+        def bfs(source):
             # change the visited status as soon as you reach the node
             visited[source] = 1
             # create a new queue
@@ -71,7 +71,7 @@ class Solution:
                 components += 1
                 if components > 1:
                     return False
-                if dfs(v):
+                if bfs(v):
                     return False
         
         return True
